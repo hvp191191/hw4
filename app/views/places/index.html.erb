@@ -1,11 +1,19 @@
-<h1>Places</h1>
+ <%if @current_user != nil%>
+  <h1><%= @current_user["username"] %></h1>
+  <h1>Places</h1>
 
-<ul>
-  <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
-  <% end %>
-</ul>
+  <ul>
+    <% for place in @places %>
+      <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+    <% end %>
+  </ul>
 
-<p>
-  <a href="/places/new">New place</a>
-</p>
+  <p>
+    <a href="/places/new">New place</a>
+  </p>
+
+   <% else %>
+   
+    <p>You need to be logged in to see the content</p>
+  
+  <%end%>

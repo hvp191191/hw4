@@ -1,3 +1,5 @@
+<%if @current_user != nil%>
+  <h1><%= @current_user["username"] %></h1>
 <h1>New Place</h1>
 
 <form action="/places" method="post">
@@ -8,3 +10,8 @@
 
   <button>Save</button>
 </form>
+<% else %>
+   
+    <p>You need to be logged in to see the content</p>
+  
+  <%end%>
