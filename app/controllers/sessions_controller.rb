@@ -15,14 +15,12 @@ class SessionsController < ApplicationController
       else
         flash["notice"] = "Unsuccessful login."
         redirect_to "/sessions/new"
-      end
-    else
+      end 
+      else
       flash["notice"] = "Unsuccessful login."
       redirect_to "/sessions/new"
     end
     
-
-  
   end
 
   def destroy

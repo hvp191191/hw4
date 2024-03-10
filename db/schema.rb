@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.1].define(version: 2022_03_09_020701) do
 
   create_table "places", force: :cascade do |t|
     t.string "name"
+    t.integer "user_id" #adding this column so that user can see only those places that he had entered and does not see the places visited by other users
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
