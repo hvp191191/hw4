@@ -12,10 +12,13 @@
     <p><%= entry["description"] %></p>
 
     <% if entry.uploaded_image.attached? %>
-      <img src ="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+      <p>image available</p>
+      <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
     <% else %>
-      <img src="<%= entry["image"] %>" class="img-fluid">
+      <!-- Show a placeholder or a message -->
+      <p>No image available</p>
     <% end %>
+
   </div>
   <% end %>
 
