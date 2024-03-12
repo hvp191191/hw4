@@ -27,12 +27,12 @@
 
 
     <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
-      <div class="container">
+      <div class="container mt-3">
       
         <a class ="navbar-brand" href="/">Travel Journal</a>
         
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <span class="navbar-text">
+          <span class="navbar-text px-2">
             <%if @current_user != nil%>
             <li class="nav-text">Logged in as: <%= @current_user["username"] %></li>
             <a class="nav-item" href="/" class="btn btn-default">Home</a>
@@ -46,7 +46,7 @@
       </div>
     </nav>
     
-    <div class = "gutter-left container">
+    <div class = "gutter-left container mt-3">
       <%if flash["notice"] != nil %>
         <div class= "alert alert-info">
           <%= flash["notice"] %>
